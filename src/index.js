@@ -57,17 +57,23 @@ const contactInfo = document.querySelectorAll('.contact p')
 const footerLinks = document.querySelector('footer a');
 
 
+
+navLinks.forEach(link => {
+  link.classList.add('italic')
+});
+footerLinks.classList.add('bold')
+
+
 const navLinkText = ['Services',
 'Product',
 'Vision',
 'Features',
 'About',
 'Contact'];
-header.style.fontStyle = "italic";
+// header.style.fontStyle = "italic";
 navLinks.forEach((link, index) => {
   link.textContent = navLinkText[index]
 })
-
 
 
 firstLogo.src = "http://localhost:9000/img/logo.png"
@@ -112,7 +118,7 @@ contactParagraphs.forEach((paragraph, index) => {
 
 
 footerLinks.textContent = 'Copyright Great Idea! 2021'
-footerLinks.style.fontWeight = 'bold'
+
 
 
 console.log('project wired!')
